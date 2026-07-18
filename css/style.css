@@ -57,6 +57,24 @@ button {
 
 }
 
+nav button {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:32px;
+
+    padding:0 12px;
+
+    line-height:1;
+
+    border-radius:8px;
+
+}
+
 
 
 .profile {
@@ -82,6 +100,16 @@ button {
     border-radius:10px;
 
     margin-top:25px;
+}
+
+.recruitment {
+
+    padding:8px 12px;
+
+    border-left:3px solid #0056b3;
+
+    background:#f5f8fc;
+
 }
 
 
@@ -115,13 +143,13 @@ h2 {
 
     margin-bottom:6px;
 
-    font-size:15px;
+    font-size:18px;
 
     line-height:1.3;
 
-    color:#666;
+    color:#333;
 
-    font-weight:600;
+    font-weight:700;
 
 }
 
@@ -130,14 +158,6 @@ h2 {
 section > .project-section-title:first-child {
 
     margin-top:0;
-
-}
-
-
-
-.project-list {
-
-    border-top:1px solid #eee;
 
 }
 
@@ -174,6 +194,12 @@ section > .project-section-title:first-child {
     color:#666;
 
     font-size:14px;
+
+}
+
+.project-main b {
+
+    font-weight:400;
 
 }
 
@@ -228,6 +254,12 @@ section > .project-section-title:first-child {
     color:#666;
 
     font-size:14px;
+
+}
+
+.award-main b {
+
+    font-weight:400;
 
 }
 

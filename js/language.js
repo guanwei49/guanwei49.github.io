@@ -46,6 +46,11 @@ show
 function filterPaper(type){
 
 
+document.querySelectorAll(".filter button").forEach(
+button=>button.classList.toggle("active",button.dataset.filter===type)
+);
+
+
 let papers=document.querySelectorAll(".paper");
 
 

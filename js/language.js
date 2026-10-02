@@ -95,11 +95,17 @@ let years=document.querySelectorAll(".year");
 years.forEach(
 year=>{
 
+if(!year.dataset.label){
+
+year.dataset.label=year.textContent.trim();
+
+}
+
 
 let next=year.nextElementSibling;
 
 
-let show=false;
+let count=0;
 
 
 
@@ -115,7 +121,7 @@ next.classList.contains("paper")
 next.style.display!=="none"
 ){
 
-show=true;
+count++;
 
 }
 
@@ -128,13 +134,17 @@ next=next.nextElementSibling;
 
 
 
-if(show){
+if(count>0){
+
+year.textContent=year.dataset.label+" ("+count+" publication"+(count===1?"":"s")+")";
 
 year.style.display="block";
 
 }
 
 else{
+
+year.textContent=year.dataset.label+" (0 publications)";
 
 year.style.display="none";
 
@@ -144,4 +154,28 @@ year.style.display="none";
 });
 
 
+let summary=document.querySelector("#publication-summary");
+
+if(summary){
+
+let visiblePapers=[...document.querySelectorAll(".paper")].filter(
+paper=>paper.style.display!=="none"
+);
+
+summary.textContent="Total: "+visiblePapers.length+" publication"+(visiblePapers.length===1?"":"s");
+
 }
+
+
+}
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+if(document.querySelector(".paper")){
+
+updateYear();
+
+}
+
+});

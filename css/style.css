@@ -407,6 +407,28 @@ margin:18px 0;
 
 }
 
+.publication-summary{
+
+margin:0 0 22px;
+
+color:#333;
+
+font-size:20px;
+
+font-weight:600;
+
+}
+
+.publication-summary::before{
+
+content:"▣";
+
+margin-right:8px;
+
+color:#0056b3;
+
+}
+
 
 .filter button{
 

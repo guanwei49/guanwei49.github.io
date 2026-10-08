@@ -38,9 +38,29 @@ show
 
 }
 
+
+document.documentElement.lang=lang;
+
+let languageToggle=document.querySelector("#language-toggle");
+
+if(languageToggle){
+
+let isChinese=lang==="zh";
+
+languageToggle.textContent=isChinese?"English":"中文";
+
+languageToggle.setAttribute("aria-label",isChinese?"Switch to English":"切换至中文");
+
+}
+
 }
 
 
+function toggleLanguage(){
+
+switchLang(document.documentElement.lang==="zh"?"en":"zh");
+
+}
 
 
 function filterPaper(type){

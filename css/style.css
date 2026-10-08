@@ -112,6 +112,17 @@ nav button {
 
 }
 
+.profile-link-icon {
+
+    display:inline-block;
+
+    margin-right:3px;
+
+    font-size:16px;
+
+    line-height:1;
+
+}
 
 section {
 
